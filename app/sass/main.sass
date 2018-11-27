@@ -106,6 +106,25 @@ body
 .has-dropdown
   position: relative
 
+.str:hover .dob-dropdown
+  animation: dobDrop .4s ease forwards
+
+@keyframes dobDrop
+  0% 
+    transform: scaleX(0, 0)
+  100%
+    transform: scaleX(1)
+
+.dob-dropdown
+  position: absolute
+  right: -100%
+  top: 0
+  background: #249AC6
+  padding: 0
+  min-width: 100%
+  transform-origin: 0 0
+  transform: scaleX(0)
+
 .dropdown
   min-width: 100%
   li a
@@ -332,8 +351,10 @@ div.section
     margin-bottom: 2vh
 
 #prtn__list__ul
+  width: 60%
   padding: 2vh 0
   margin: 2vh 0
+  margin-left: 20%
   overflow-y: auto
   max-height: 60vh
 

@@ -140,6 +140,26 @@ body
       padding-right: 26px
       text-decoration: none
 
+
+.str:hover .dob-dropdown
+    animation: dobDrop .4s ease forwards
+
+@keyframes dobDrop
+  0% 
+    transform: scaleX(0, 0)
+  100%
+    transform: scaleX(1)
+
+.dob-dropdown
+  position: absolute
+  right: -100%
+  top: 0
+  background: #249AC6
+  padding: 0
+  min-width: 100%
+  transform-origin: 0 0
+  transform: scaleX(0)
+
 .has-dropdown:hover .dropdown
   -webkit-animation-delay: 1s
   -moz-animation-delay: 1s
@@ -157,6 +177,7 @@ body
   padding: 0
   transform: scaleY(0)
   transform-origin: 0 0
+
 @keyframes drop
   0%
     transform: scaleY(0)
@@ -169,6 +190,9 @@ body
 
 .banner
   background: url('../img/topBannerBg-min.png')
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
   height: 60vh
   border-bottom: 4px solid #249AC6
 
@@ -304,7 +328,7 @@ body
       text-align: center
       font-weight: bold
       text-transform: uppercase
-      margin-bottom: 20px
+      margin-bottom: 35px
     ul
       padding: 0
       margin: 0
@@ -319,15 +343,41 @@ body
           font-size: 1.2em
           &:hover
             cursor: pointer
-          &.adress-link
-            position: relative
+
+    .adress
+      li
+        a
+          font-weight: normal
+          font-size: 1.1em
+        .adress-link
+          position: relative
+          font-weight: normal
+          font-size: 1.1em
+          margin: 0
+          &:hover
             .show-in-maps
-              background: rgba(0, 0, 0, .6)
-              padding: 5px 20px
-              border-radius: 10px
-              top: -100%
+              transform: translate(-50%, 0) scaleY(1)
+          .show-in-maps
+            background: rgba(0, 0, 0, .8)
+            transition: .2s ease
+            padding: 7px 20px
+            border-radius: 10px
+            top: -190%
+            left: 50%
+            transform: translate(-50%, 0) scaleY(0)
+            transform-origin: bottom
+            position: absolute
+            display: block
+            font-size: .9em
+            width: 80%
+            text-align: center
+            font-weight: bold
+            &::before
               position: absolute
-              font-size: .8em
+              content: ''
+              top: 100%
+              border: 10px solid transparent
+              border-top: 10px solid rgba(0, 0, 0, .8)
     .socials
       display: flex
       li
