@@ -187,7 +187,17 @@ body {
   background-position: center;
   background-size: cover;
   height: 60vh;
-  border-bottom: 4px solid #249AC6; }
+  border-bottom: 4px solid #249AC6;
+  position: relative; }
+  .banner::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    opacity: .3; }
 
 .banner-inst-info {
   color: #fff;
