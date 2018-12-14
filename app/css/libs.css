@@ -386,7 +386,7 @@ body {
       font-size: 4em; }
       .w-links .w-links__block .socials li a {
         color: #fff;
-        padding: 3px 5px 2px;
+        padding: 0 5px 2px;
         border-radius: 6px;
         position: relative;
         z-index: 2; }
